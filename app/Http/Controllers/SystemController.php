@@ -61,10 +61,12 @@ class SystemController extends Controller
 
     	try {
 
+
 		    $this->validate($request, [
 		        'ip' => 'required',
 		        'label' => 'required'
 		    ]);
+
 
 		    $ip = $request -> input('ip');
 		    $label = $request -> input('label');
@@ -159,7 +161,6 @@ class SystemController extends Controller
 					200, [], JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT
 				);
 			}
-
 
 	    	// Get account_id parameter that generated from middleware
 	    	$account_id = $request -> get('account_id');
@@ -258,6 +259,5 @@ class SystemController extends Controller
 				500, [], JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT
 			);
     	}
-
     }
 }
