@@ -16,8 +16,8 @@ This project is built for Practical Test
 
  1. Clone the project repository.
  2. Go to the main directory of your project and run `composer install`.
- 3. Manually create .env file in your root directory, copy the .env.example and change the setting aside from JWT_SECRET
- 4. Import the dbinit.sql (found in the root directory) to your MySQL database,
+ 3. Import the dbinit.sql (found in the root directory) to your MySQL database.
+ 4. Manually create .env file in your root directory, copy the .env.example and change the setting aside from JWT_SECRET
 
 ### Notice
 
