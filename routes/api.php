@@ -14,7 +14,6 @@
 $router->get('/', function () use ($router) {
 
 	try {
-
 		return response()->json([
 			'name' => 'IP Address Management Solutions API',
 		]);

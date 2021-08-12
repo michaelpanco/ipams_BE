@@ -13,14 +13,12 @@
 
 //$router->get('practices', 'CustomerController@practices');
 
-
 // Begin Account API
 $router->group(['prefix' => 'account'], function () use ($router) {
 	$router->post('login', 'AccountController@login');
 });
 
 $router->group(['middleware' => 'auth'], function () use ($router) {
-
 
 	$router->group(['prefix' => 'account'], function () use ($router) {
 		$router->get('activities', 'AccountController@activities');
