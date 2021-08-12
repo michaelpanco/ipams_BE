@@ -1,7 +1,5 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -14,5 +12,23 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+
+	try {
+
+		return response()->json([
+			'name' => 'IP Address Management Solutions API',
+		]);
+
+	} catch (Exception $e) {
+		return response()->json([
+			'name' => 'Iconpractice API',
+		]);
+	}
 });
+
+// API version 1.0
+$router->group(['prefix' => 'v1'], function () use ($router) {
+	require __DIR__ . '/v1.php';
+});
+
+// API version onwards
